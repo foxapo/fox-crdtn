@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{F852CFE1CE8B4762}StalkerUniverse/Data/factions/bandit.edds"
+ Author "sanctuary-pc"
+ ChangeDate 245018161
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "bandit.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

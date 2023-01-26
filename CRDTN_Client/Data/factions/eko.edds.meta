@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{5742F9275856064B}StalkerUniverse/Data/factions/eko.edds"
+ Author "sanctuary-pc"
+ ChangeDate 815443505
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "eko.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

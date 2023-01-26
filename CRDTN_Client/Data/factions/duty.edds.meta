@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{00E5C687C8C82602}StalkerUniverse/Data/factions/duty.edds"
+ Author "sanctuary-pc"
+ ChangeDate 614116913
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "duty.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

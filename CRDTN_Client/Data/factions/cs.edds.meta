@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{0F48390E12ED5FAC}StalkerUniverse/Data/factions/cs.edds"
+ Author "sanctuary-pc"
+ ChangeDate 446344753
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "cs.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

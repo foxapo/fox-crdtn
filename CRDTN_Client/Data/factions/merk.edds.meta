@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E1D5644D99DB889C}StalkerUniverse/Data/factions/merk.edds"
+ Author "sanctuary-pc"
+ ChangeDate 1352314417
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "merk.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -3,9 +3,7 @@ class CfgPatches
     class CRDTN_Server
     {
         units[] = {};
-        weapons[] = {};
-        requiredVersion = 0.1;
-        requiredAddons[] = { "DZ_Data", "DZ_Scripts", "CRDTN_Client" };
+        requiredAddons[] = {"DZ_Data", "DZ_Scripts", "CRDTN_Client"};
     };
 };
 
@@ -14,20 +12,13 @@ class CfgMods
 
     class CRDTN_Server
     {
-        name = "FOX Coradiation ClientMod";
-        credits = "Renegade Server";
-        author = "freeman";
+        name = "FOX Coradiation ServerMod";
+        credits = "Big Kudos to guys from the Renegade Stalker Server for providing valuable information";
+        author = "foxapo/freeman/greyfox";
         type = "mod";
-        dependencies[] = {"Game", "World", "Mission"};
-        dir = "CRDTN_Server";
-
+        dependencies[] = {"World", "Mission"};
         class defs
         {
-            class gameScriptModule
-            {
-                value = "";
-                files[] = {"CRDTN_Server/Scripts/3_Game"};
-            };
             class worldScriptModule
             {
                 value = "";
@@ -40,14 +31,4 @@ class CfgMods
             };
         };
     };
-};
-
-class CfgSlots
-{
-   
-};
-
-class CfgVehicles
-{
-   
 };

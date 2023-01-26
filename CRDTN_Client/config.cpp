@@ -15,8 +15,8 @@ class CfgMods
     class CRDTN_Client
     {
         name = "FOX Coradiation ClientMod";
-        credits = "Renegade Server";
-        author = "freeman";
+        credits = "Big Kudos to guys from the Renegade Stalker Server for providing valuable information";
+        author = "foxapo/freeman/greyfox";
         type = "mod";
         dependencies[] = {"Game", "World", "Mission"};
         dir = "CRDTN_Client";

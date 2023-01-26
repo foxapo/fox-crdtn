@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{120E1670F0824BA1}StalkerUniverse/Data/factions/mono.edds"
+ Author "sanctuary-pc"
+ ChangeDate 1721413169
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "mono.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

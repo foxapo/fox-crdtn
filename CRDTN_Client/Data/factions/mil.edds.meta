@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{71BBC041F5AC173A}StalkerUniverse/Data/factions/mil.edds"
+ Author "sanctuary-pc"
+ ChangeDate 1553641009
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "mil.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

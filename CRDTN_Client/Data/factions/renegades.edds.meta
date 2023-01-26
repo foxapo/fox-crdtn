@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{430480108D2F4708}StalkerUniverse/Data/factions/renegades.edds"
+ Author "sanctuary-pc"
+ ChangeDate 1721413169
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "renegades.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
