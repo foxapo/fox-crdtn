@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{BE0537C0054C8230}CRDTN_Client/Data/elements/char_panel.edds"
+ Author "sanctuary-pc"
+ ChangeDate 694709819
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "char_panel.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

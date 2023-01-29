@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{6B6E257A4E5708E0}CRDTN_Client/Data/devices/yellow_pattern_1042.edds"
+ Author "sanctuary-pc"
+ ChangeDate 159411772
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "yellow_pattern_1042.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

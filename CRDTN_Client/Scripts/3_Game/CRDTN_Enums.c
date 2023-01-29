@@ -1,17 +1,32 @@
 enum CRDTN_EFaction
 {
+    _NONE,
+    Zone,
     Loner,
     Bandit, 
     Mercenaries,
-    Military
+    Military,
+    Duty,
+    Freedom,
+    Ecologists,
+    ClearSky,
+    Renegades,
+    Monolith,
+    _COUNT
 };
 
 enum CRDTN_ERank
 {
+    _NONE,
     Rookie,
     Experienced,
     Veteran,
-    Expert
+    Expert,
+    Elite,
+    Master,
+    Legendary,
+    Godlike,
+    _COUNT
 };
 
 enum CRDTN_EQuestType
@@ -23,9 +38,3 @@ enum CRDTN_EQuestType
     Trade,
     _COUNT
 };
-
-
-enum CRDTN_RPC_TYPE
-{
-    
-}

@@ -1,0 +1,751 @@
+FrameWidgetClass inventory_root {
+ clipchildren 0
+ color 0 0 0 0
+ size 1 1
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ priority 1
+ {
+  FrameWidgetClass InventoryFrameWidget {
+   clipchildren 0
+   ignorepointer 0
+   size 0.98 0.9
+   halign center_ref
+   valign center_ref
+   priority 1
+   {
+    FrameWidgetClass InventoryFrameWidgetInside {
+     clipchildren 0
+     ignorepointer 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     priority 1
+     {
+      WindowWidgetClass InventoryWindow {
+       visible 1
+       clipchildren 0
+       inheritalpha 1
+       ignorepointer 0
+       position 0 0
+       size 1 0.99
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       fixaspect none
+       priority 1
+       style Default
+       "no focus" 0
+       "title visible" 0
+       font "gui/fonts/AmorSerifPro16"
+       "text color" 1 1 0 1
+       {
+        PanelWidgetClass CenterPanel {
+         visible 1
+         clipchildren 0
+         ignorepointer 1
+         color 1 1 1 0
+         position 0 40
+         size 0.32 0.88
+         halign center_ref
+         hexactpos 0
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         priority 2
+         style blank
+         {
+          FrameWidgetClass CharacterPanel {
+           visible 1
+           disabled 0
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 0
+           position 0 0
+           size 1 660
+           halign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           fixaspect none
+           priority 0
+           {
+            FrameWidgetClass CursorCharacter {
+             visible 0
+             position 0 0
+             size 1 1
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             priority 100
+            }
+           }
+          }
+          ScrollWidgetClass HandsPanel {
+           visible 1
+           disabled 0
+           clipchildren 1
+           inheritalpha 0
+           ignorepointer 0
+           keepsafezone 0
+           color 0.1961 0.1961 0.1961 0.3922
+           size 530 0
+           halign center_ref
+           valign bottom_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           fixaspect none
+           priority 100
+           scriptclass "SizeToChild"
+           "Scrollbar V" 1
+           {
+            FrameWidgetClass DropzoneX {
+             visible 0
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+            }
+           }
+           {
+            ScriptParamsClass {
+             m_ChildName "Content"
+             m_ResizeVertical 1
+            }
+           }
+          }
+         }
+        }
+        PanelWidgetClass CenterBackground {
+         visible 1
+         clipchildren 0
+         ignorepointer 0
+         color 0.1961 0 0 0
+         size 0.32 1.2
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style rover_sim_colorable
+         "no focus" 0
+        }
+        PanelWidgetClass LeftBackground {
+         visible 1
+         clipchildren 0
+         ignorepointer 0
+         color 0.0863 0.0863 0.0863 0.2157
+         position -0.69 0
+         size 0.97 1.2
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scaled 1
+         draggable 0
+         style rover_sim_colorable
+         {
+          ImageWidgetClass LeftBG {
+           ignorepointer 1
+           color 1 1 1 0.8784
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           imageTexture "{A1A829A696150757}CRDTN_Client/Data/devices/big_pattern.edds"
+           mode blend
+           "src alpha" 1
+           "no wrap" 0
+           stretch 0
+           filter 1
+           nocache 0
+           {
+            ImageWidgetClass ImageWidget0 {
+             visible 0
+             ignorepointer 1
+             position 0 0
+             size 48 0.021
+             halign right_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+           }
+          }
+         }
+        }
+        PanelWidgetClass RightBackground {
+         visible 1
+         clipchildren 0
+         ignorepointer 0
+         color 0.0863 0.0863 0.0863 0.2157
+         position 0.69 0
+         size 0.97 1.2
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         draggable 0
+         style rover_sim_colorable
+         "no focus" 0
+         {
+          ImageWidgetClass LeftBG0 {
+           ignorepointer 1
+           color 1 1 1 0.8784
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           imageTexture "{A1A829A696150757}CRDTN_Client/Data/devices/big_pattern.edds"
+           mode blend
+           "src alpha" 1
+           "no wrap" 0
+           stretch 0
+           filter 1
+           nocache 0
+           {
+            ImageWidgetClass ImageWidget1 {
+             visible 0
+             ignorepointer 1
+             position 0 0
+             size 48 0.021
+             halign right_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+           }
+          }
+         }
+        }
+        FrameWidgetClass InventoryWrapper {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          FrameWidgetClass "Top Wrapper" {
+           ignorepointer 1
+           size 1 160
+           halign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass Left_Char {
+             clipchildren 0
+             ignorepointer 1
+             position 0 0
+             size 530 160
+             valign center_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             imageTexture "{BE0537C0054C8230}CRDTN_Client/Data/elements/char_panel.edds"
+             mode blend
+             "src alpha" 1
+             stretch 1
+             "flip u" 1
+             {
+              GridSpacerWidgetClass VicinityHeader {
+               ignorepointer 1
+               position 20 0
+               size 300 138
+               valign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               Columns 1
+               {
+                MultilineTextWidgetClass VicinityName {
+                 ignorepointer 1
+                 color 0.6902 0.6902 0.6902 1
+                 position 10 10
+                 size 48 48
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 scaled 1
+                 style DayZNormal
+                 font "gui/fonts/etelkatextpro28"
+                 "exact text" 0
+                 "size to text h" 0
+                 "size to text v" 0
+                 "text valign" center
+                 wrap 1
+                }
+                MultilineTextWidgetClass VicinityRank {
+                 ignorepointer 1
+                 color 0.6902 0.6902 0.6902 1
+                 position 10 10
+                 size 48 48
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 scaled 1
+                 style DayZNormal
+                 font "gui/fonts/etelkatextpro28"
+                 "exact text" 0
+                 "size to text h" 0
+                 "size to text v" 0
+                 "text valign" center
+                 wrap 1
+                }
+                MultilineTextWidgetClass VicinityFaction {
+                 ignorepointer 1
+                 color 0.6902 0.6902 0.6902 1
+                 position 10 10
+                 size 48 48
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 scaled 1
+                 style DayZNormal
+                 font "gui/fonts/etelkatextpro28"
+                 "exact text" 0
+                 "size to text h" 0
+                 "size to text v" 0
+                 "text valign" center
+                 wrap 1
+                }
+               }
+              }
+              FrameWidgetClass Left_Photo {
+               ignorepointer 1
+               position 20 0
+               size 160 138
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               {
+                FrameWidgetClass PhotoWrapper {
+                 ignorepointer 1
+                 size 140 140
+                 halign center_ref
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 {
+                  ImageWidgetClass VicinityPhoto {
+                   visible 0
+                   ignorepointer 1
+                   position 0 0
+                   size 0.9 0.9
+                   halign center_ref
+                   valign center_ref
+                   hexactpos 0
+                   vexactpos 0
+                   hexactsize 0
+                   vexactsize 0
+                   imageTexture "{3F39C5CDB98587C8}CRDTN_Client/Data/factions/bandit.edds"
+                   mode blend
+                   "src alpha" 1
+                   stretch 1
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+            ImageWidgetClass Right_Char {
+             clipchildren 0
+             ignorepointer 1
+             size 530 160
+             halign right_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             imageTexture "{BE0537C0054C8230}CRDTN_Client/Data/elements/char_panel.edds"
+             mode blend
+             "src alpha" 1
+             stretch 1
+             "flip u" 0
+             {
+              GridSpacerWidgetClass CharacterHeader {
+               ignorepointer 1
+               position 20 0
+               size 300 138
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               Columns 1
+               {
+                MultilineTextWidgetClass CharacterName {
+                 ignorepointer 1
+                 color 0.6902 0.6902 0.6902 1
+                 position 10 10
+                 size 48 48
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 scaled 1
+                 style DayZNormal
+                 text "Freeman"
+                 font "gui/fonts/etelkatextpro28"
+                 "exact text" 0
+                 "size to text h" 0
+                 "size to text v" 0
+                 "text halign" right
+                 "text valign" center
+                 wrap 1
+                }
+                MultilineTextWidgetClass CharacterRank {
+                 ignorepointer 1
+                 color 0.6902 0.6902 0.6902 1
+                 position 10 10
+                 size 48 48
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 scaled 1
+                 style DayZNormal
+                 text "Legendary"
+                 font "gui/fonts/etelkatextpro28"
+                 "exact text" 0
+                 "size to text h" 0
+                 "size to text v" 0
+                 "text halign" right
+                 "text valign" center
+                 wrap 1
+                }
+                MultilineTextWidgetClass CharacterFaction {
+                 ignorepointer 1
+                 color 0.6902 0.6902 0.6902 1
+                 position 10 10
+                 size 48 48
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 scaled 1
+                 style DayZNormal
+                 text "Bandit"
+                 font "gui/fonts/etelkatextpro28"
+                 "exact text" 0
+                 "size to text h" 0
+                 "size to text v" 0
+                 "text halign" right
+                 "text valign" center
+                 wrap 1
+                }
+               }
+              }
+              FrameWidgetClass Right_Photo {
+               ignorepointer 1
+               position 20 0
+               size 160 138
+               valign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               {
+                FrameWidgetClass PhotoWrapper0 {
+                 ignorepointer 1
+                 size 140 140
+                 halign center_ref
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 {
+                  ImageWidgetClass CharacterPhoto {
+                   visible 1
+                   ignorepointer 1
+                   position 0 0
+                   size 0.9 0.9
+                   halign center_ref
+                   valign center_ref
+                   hexactpos 0
+                   vexactpos 0
+                   hexactsize 0
+                   vexactsize 0
+                   imageTexture "{3F39C5CDB98587C8}CRDTN_Client/Data/factions/bandit.edds"
+                   mode blend
+                   "src alpha" 1
+                   stretch 1
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          FrameWidgetClass "Bottom Wrapper" {
+           ignorepointer 1
+           position 0 165
+           size 1 680
+           halign center_ref
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            PanelWidgetClass LeftPanel {
+             clipchildren 1
+             ignorepointer 1
+             position 0 0
+             size 530 1
+             valign center_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             priority 101
+             scriptclass ""
+             style blank
+             "no focus" 1
+            }
+            PanelWidgetClass RightPanel {
+             visible 1
+             clipchildren 1
+             ignorepointer 1
+             size 530 1
+             halign right_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 1
+             vexactsize 0
+             priority 101
+             style blank
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    PlayerPreviewWidgetClass CharacterPanelWidget {
+     disabled 0
+     clipchildren 0
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     priority 2
+    }
+    WrapSpacerWidgetClass QuickbarGrid {
+     visible 1
+     disabled 0
+     position 0 0
+     size 1 66
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     priority 100
+     scriptclass "InventoryGrid"
+     Margin 0
+     "Size To Content H" 1
+     content_halign center
+     content_valign bottom
+     {
+      ScriptParamsClass {
+      }
+     }
+    }
+    FrameWidgetClass SpecializationPanelPanel {
+     ignorepointer 1
+     position 0 32
+     size 292 32
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      PanelWidgetClass SpecializationPanel {
+       visible 1
+       clipchildren 0
+       size 260 32
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect fixwidth
+       priority 1
+       style blank
+       {
+        ImageWidgetClass SpecializationIconNeedle {
+         visible 1
+         size 1 1
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         fixaspect fixwidth
+         priority 999
+         image0 "set:dayz_gui image:icon_needle"
+         mode additive
+         "src alpha" 1
+         "no wrap" 1
+         "flip u" 0
+         "flip v" 0
+         filter 1
+        }
+        ImageWidgetClass SpecializationIconHammer {
+         visible 1
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         fixaspect fixwidth
+         priority 999
+         image0 "set:dayz_gui image:icon_hammer"
+         mode additive
+         "src alpha" 1
+         "no wrap" 1
+         "flip u" 0
+         "flip v" 0
+         filter 1
+         nocache 0
+        }
+        ImageWidgetClass SpecializationBar {
+         visible 1
+         clipchildren 0
+         position 0 0
+         size 180 8
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         priority 999
+         image0 "set:dayz_gui image:icon_bar_specialisation"
+         mode additive
+         "src alpha" 1
+         "no wrap" 1
+         "flip u" 0
+         "flip v" 0
+         filter 0
+         {
+          ImageWidgetClass SpecializationIcon {
+           visible 1
+           clipchildren 0
+           position 0 -0.75
+           size 17 11
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           fixaspect fixwidth
+           priority 999
+           image0 "set:dayz_gui image:specialization_arrow"
+           mode additive
+           "src alpha" 1
+           "no wrap" 1
+           "flip u" 0
+           "flip v" 0
+           filter 1
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  ImageWidgetClass vignette {
+   visible 1
+   ignorepointer 0
+   color 0 0 0 0.7843
+   size 2.2 1.3
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+   mode blend
+   "src alpha" 1
+   "no wrap" 1
+   stretch 1
+   filter 0
+   nocache 1
+  }
+ }
+}

@@ -12,6 +12,17 @@ class CRDTN_User
     string Password;
     string Description;
     string RegistrationDate;
+
+    string PrintData()
+    {
+        return "User: " + PlayerName + " (" + Description + ")";
+    }
+};
+
+class CRDTN_UserClient
+{
+    int Id; 
+    string PlayerName;
 };
 
 class CRDTN_UserFaction

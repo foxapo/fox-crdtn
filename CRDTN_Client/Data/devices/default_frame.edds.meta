@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{3BCEB07BAE106D9C}CRDTN_Client/Data/devices/default_frame.edds"
+ Author "sanctuary-pc"
+ ChangeDate -317706693
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "default_frame.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

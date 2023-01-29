@@ -7,8 +7,9 @@ modded class PluginManager
 
 		if (GetGame().IsClient())
 		{
-			RegisterPlugin("PluginFactionsClient", true, false);
 			RegisterPlugin("PluginUsersClient", true, false);
+			RegisterPlugin("PluginFactionsClient", true, false);
+			RegisterPlugin("PluginPdaClient", true, false);
 		}
 	}
 }

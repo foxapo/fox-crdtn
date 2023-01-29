@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{63A4A829E9E2491A}CRDTN_Client/Data/ranks/experienced.edds"
+ Author "sanctuary-pc"
+ ChangeDate -2139754950
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "experienced.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

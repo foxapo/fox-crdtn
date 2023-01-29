@@ -1,0 +1,24 @@
+ImageSetClass {
+ Name "NewImageSet0"
+ RefSize 128 128
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path ""
+  }
+  ImageSetTextureClass {
+   mpix 1
+   path ""
+  }
+ }
+ Images {
+  ImageSetDefClass rank_rookie {
+   Name "rank_rookie"
+   Pos 8 8
+   Size 100 100
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

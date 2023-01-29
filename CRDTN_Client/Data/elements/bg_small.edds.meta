@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{232888EA51AA485B}CRDTN_Client/Data/elements/bg_small.png"
+ Author "sanctuary-pc"
+ ChangeDate 1252912698
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "bg_small.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

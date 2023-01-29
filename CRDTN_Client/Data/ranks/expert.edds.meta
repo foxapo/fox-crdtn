@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{8E05D9E1A50AC04E}CRDTN_Client/Data/ranks/expert.edds"
+ Author "sanctuary-pc"
+ ChangeDate -1938428358
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "expert.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

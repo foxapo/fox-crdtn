@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A320BEEACD69F196}CRDTN_Client/Data/ranks/veteran.edds"
+ Author "sanctuary-pc"
+ ChangeDate -1569329606
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "veteran.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

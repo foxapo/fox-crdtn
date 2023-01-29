@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{73C4AFECB9CD4D39}CRDTN_Client/Data/elements/inventory_panel.edds"
+ Author "sanctuary-pc"
+ ChangeDate -1022333381
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "inventory_panel.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

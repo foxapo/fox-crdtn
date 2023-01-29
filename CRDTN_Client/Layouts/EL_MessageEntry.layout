@@ -36,7 +36,7 @@ FrameWidgetClass MessageEntry_Root {
      vexactsize 0
      scaled 1
      fixaspect fixwidth
-     imageTexture "{0F48390E12ED5FAC}StalkerUniverse/Data/factions/cs.edds"
+     imageTexture "{0F48390E12ED5FAC}CRDTN_Client/Data/factions/cs.edds"
      mode blend
      "src alpha" 1
      stretch 1

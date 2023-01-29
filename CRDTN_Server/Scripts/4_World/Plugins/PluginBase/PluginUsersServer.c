@@ -35,12 +35,17 @@ class PluginUsersServer : PluginUsersBase
         {
             return;
         }
-        
+        Print(CRDTN_MOD_PREFIX + " Logging in user " + sender.GetName());
         int id = CRDTN_GlobalUtils.ParseID(sender.GetPlainId());
         CRDTN_User user = Users.Get(id);
         if (user)
         {
-            GetRPCManager().SendRPC(CRDTN_MOD_PREFIX, "LoginUser", new Param1<bool>(true), true, sender);
+
+            CRDTN_UserClient userClient = new CRDTN_UserClient();
+            userClient.Id = user.Id;
+            userClient.PlayerName = user.PlayerName;
+
+            GetRPCManager().SendRPC(CRDTN_MOD_PREFIX, "LoginUser", new Param1<CRDTN_UserClient>(userClient), true, sender);
         }
         else
         {
@@ -54,7 +59,7 @@ class PluginUsersServer : PluginUsersBase
         {
             return;
         }
-
+        Print(CRDTN_MOD_PREFIX + " Registering user " + sender.GetName());
         int id = CRDTN_GlobalUtils.ParseID(sender.GetPlainId());
         CRDTN_User user = Users.Get(id);
         AddUser(sender);

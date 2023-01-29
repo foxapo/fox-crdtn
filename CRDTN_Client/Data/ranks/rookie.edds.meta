@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{909A8B8EB48EF03B}CRDTN_Client/Data/ranks/rookie.edds"
+ Author "sanctuary-pc"
+ ChangeDate -1770656198
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "rookie.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -15,35 +15,6 @@ modded class PlayerBase
         Class.CastTo(m_PluginUsersClient, GetPlugin(PluginUsersClient));
     }
 
-    override void EEInit()
-    {
-        super.EEInit();
-        if (GetGame().IsClient())
-        {
-            GetRPCManager().SendRPC(CRDTN_MOD_PREFIX, "LoginUser", new Param1<bool>(false), true, GetIdentity());
-        }
-    }
-
-    override void OnConnect()
-    {
-        super.OnConnect();
-
-        if (GetGame().IsClient())
-        {
-            GetRPCManager().SendRPC(CRDTN_MOD_PREFIX, "GetAllFactions", new Param1<bool>(true), true, GetIdentity());
-        }
-    }
-
-    override void OnSelectPlayer()
-    {
-        super.OnConnect();
-        if (GetGame().IsClient())
-        {
-            GetRPCManager().SendRPC(CRDTN_MOD_PREFIX, "LoginUser", new Param1<bool>(false), true, GetIdentity());
-        }
-    }
-
-
     void SetFactionId(int factionId)
     {
         m_FactionId = factionId;
@@ -56,7 +27,23 @@ modded class PlayerBase
         SetSynchDirty();
     }
 
+    override void OnPlayerLoaded()
+    {
+        super.OnPlayerLoaded();
+        if (IsControlledPlayer())//true only on client for the controlled character
+		{
+            GetDayZGame().CRDTNGetEventHandler().GetEventInvoker(CRDTN_EVT_PLAYER_FACTION_SYNC).Invoke();
+        }
+    }
 
+    int GetFactionId()
+    {
+        return m_FactionId;
+    }
 
+    int GetFactionRank()
+    {
+        return m_FactionRank;
+    }
 };
 
