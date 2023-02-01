@@ -80,12 +80,6 @@ class PluginFactionsClient : PluginFactionsBase
         return "";
     }
 
-    bool IsFactionInitialized()
-    {
-        return m_Factions != null;
-    }
-
-
     // RPCs
     override void GetAllFactions(CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target)
     {
@@ -111,6 +105,7 @@ class PluginFactionsClient : PluginFactionsBase
             m_Ranks.Insert(rank.Id, rank);
         }
         Print("Factions received!");
+        m_IsInitialized = true;
     }
 
     override void GetFactionById(CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target)

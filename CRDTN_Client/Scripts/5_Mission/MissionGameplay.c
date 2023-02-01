@@ -56,5 +56,29 @@ modded class MissionGameplay
                 pluginPDA.Close();
             }
         }
+
+        // if (key == KeyCode.KC_LMENU)
+        // {
+        //     Class.CastTo(pluginPDA, GetPlugin(PluginPdaClient));
+        //     if (pluginPDA && pluginPDA.IsOpen())
+        //     {
+        //         GetGame().GetMission().PlayerControlEnable(false);
+        //     }
+        // }
     }
+
+    // override void OnKeyPress(int key)
+    // {
+    //     super.OnKeyPress(key);
+    //     if (key == KeyCode.KC_LMENU)
+    //     {
+    //         PluginPdaClient pluginPDA;
+    //         Class.CastTo(pluginPDA, GetPlugin(PluginPdaClient));
+    //         if (pluginPDA && pluginPDA.IsOpen())
+    //         {
+    //             GetGame().GetMission().PlayerControlEnable(true);
+    //         }
+    //     }
+    // }
+
 }

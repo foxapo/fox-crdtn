@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B20E467BF9C55049}CRDTN_Client/Data/devices/pda.edds"
+ Author "sanctuary-pc"
+ ChangeDate 711159357
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "pda.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

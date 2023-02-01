@@ -1,6 +1,8 @@
 class PluginUsersClient : PluginUsersBase
 {
     ref CRDTN_UserClient m_User;
+    
+    private bool m_IsLoggedIn = false;
 
     string GetPlayerName()
     {
@@ -34,6 +36,7 @@ class PluginUsersClient : PluginUsersBase
             m_User = new CRDTN_UserClient();
             m_User.Id = data.param1.Id;
             m_User.PlayerName = data.param1.PlayerName;
+            m_IsInitialized = true;
         }
         else
         {

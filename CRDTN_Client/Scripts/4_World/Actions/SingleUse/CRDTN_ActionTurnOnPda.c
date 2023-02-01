@@ -20,23 +20,19 @@ class CRDTN_ActionTurnOnPda : ActionTurnOnWhileInHands
 	{
 		if (item.IsPdaDevice())
 		{
-
 			PluginPdaClient pluginPDA;
 			if (Class.CastTo(pluginPDA, GetPlugin(PluginPdaClient)))
 			{
 				return !pluginPDA.IsOpen();
 			}
-
 			return item.HasEnergyManager() && !item.GetCompEM().IsWorking();
 		}
-
 		return false;
 	}
 
 	override void OnExecuteClient(ActionData action_data)
 	{
 		super.OnExecuteClient(action_data);
-
 		PluginPdaClient pluginPDA;
 		if (Class.CastTo(pluginPDA, GetPlugin(PluginPdaClient)))
 		{

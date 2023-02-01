@@ -8,199 +8,1141 @@ FrameWidgetClass CRDTN_PdaFrame_Root {
  hexactsize 0
  vexactsize 0
  {
-  ImageWidgetClass FrameBG {
-   ignorepointer 1
-   color 0.5412 0.5412 0.5412 1
-   position 0.00108 -0.00281
-   size 1.00217 0.99439
-   halign center_ref
-   valign center_ref
-   hexactpos 0
-   vexactpos 0
-   hexactsize 0
-   vexactsize 0
-   imageTexture "{A1A829A696150757}CRDTN_Client/Data/devices/big_pattern.edds"
-   mode blend
-   stretch 0
-  }
-  PanelWidgetClass PanelMain {
+  ImageWidgetClass PdaImage {
+   visible 1
    ignorepointer 1
    position 0 0
-   size 0.99 0.99
+   size 1 1
    halign center_ref
-   valign center_ref
+   valign bottom_ref
    hexactpos 0
    vexactpos 0
    hexactsize 0
    vexactsize 0
+   scaled 0
+   imageTexture "{B20E467BF9C55049}CRDTN_Client/Data/devices/pda.edds"
+   mode blend
+   "src alpha" 1
+   stretch 1
    {
-    PanelWidgetClass Left {
+    ImageWidgetClass FrameBG {
+     visible 1
      ignorepointer 1
-     position 0.011 0.092
-     size 0.15 0.822
+     color 0.5412 0.5412 0.5412 1
+     position -0.07614 0
+     size 0.61374 0.78931
+     halign center_ref
+     valign center_ref
      hexactpos 0
      vexactpos 0
      hexactsize 0
      vexactsize 0
+     scaled 1
+     imageTexture "{A1A829A696150757}CRDTN_Client/Data/devices/big_pattern.edds"
+     mode blend
+     stretch 0
      {
-      GridSpacerWidgetClass CRDTN_Frame_Left_Grid {
+      PanelWidgetClass PanelMain {
+       visible 1
        ignorepointer 1
-       size 0.98 0.98
+       position 0 0
+       size 0.99 0.99
        halign center_ref
+       valign center_ref
        hexactpos 0
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       "Size To Content H" 1
-       "Size To Content V" 1
-       content_halign center
-       Columns 1
-       Rows 60
        {
-        RichTextWidgetClass CRDTN_Left_Item {
+        PanelWidgetClass Left {
          ignorepointer 1
-         size 1 24.6478
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 1
-         scaled 0
-         text "Welcome to the zone "
-         font "gui/fonts/etelkatextpro22"
-         "exact text" 0
-         "size to text h" 0
-         "size to text v" 1
-         "text valign" center
-         wrap 1
-        }
-        HtmlWidgetClass CRDTN_Left_Item0 {
-         ignorepointer 1
-         size 1 24.6478
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 1
-         scaled 0
-         text "Welcome to the zone"
-         font "gui/fonts/etelkatextpro22"
-         "exact text" 0
-         "size to text h" 0
-         "size to text v" 1
-         "text valign" center
-         wrap 1
-        }
-       }
-      }
-     }
-    }
-    PanelWidgetClass Right {
-     ignorepointer 1
-     position 0.171 0.092
-     size 0.824 0.822
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 0
-    }
-    PanelWidgetClass Top {
-     ignorepointer 1
-     position 0.011 0
-     size 0.98395 48
-     hexactpos 0
-     vexactpos 1
-     hexactsize 0
-     vexactsize 1
-     {
-      FrameWidgetClass TopLeft {
-       ignorepointer 1
-       position 0 0
-       size 140.5 40
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       {
-        TextWidgetClass TextWidget0 {
-         ignorepointer 1
-         position 0 0
-         size 0.8 0.6
-         halign center_ref
-         valign center_ref
+         position 0.01 0.08518
+         size 0.17 0.7
          hexactpos 0
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         text "PDA"
-         font "gui/fonts/etelkatextpro28"
-         "text halign" center
-         "text valign" center
+         {
+          ImageWidgetClass ContentBackground0 {
+           visible 1
+           clipchildren 1
+           ignorepointer 1
+           color 0.1451 0.1451 0.1451 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           imageTexture "{6B6E257A4E5708E0}CRDTN_Client/Data/devices/yellow_pattern_1042.edds"
+          }
+          GridSpacerWidgetClass CRDTN_Frame_Left_Grid {
+           ignorepointer 1
+           size 0.98 0.98
+           halign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Colorable
+           content_halign center
+           Columns 1
+           Rows 30
+           {
+            FrameWidgetClass PDA_ListMenu_Entry {
+             clipchildren 1
+             position 0 0.01715
+             size 0.9 45
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             scaled 1
+             {
+              ButtonWidgetClass HtmlWidget0 {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 1 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               scaled 0
+               text "Hello"
+               text_offset 20 0
+               text_halign left
+               font "gui/fonts/etelkatextpro16"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+              }
+              ImageWidgetClass ImageWidget11 {
+               ignorepointer 1
+               color 0.2 0.3412 0.7686 0.1686
+               position 0 0
+               size 3 1
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+             }
+            }
+            FrameWidgetClass PDA_ListMenu_Entry0 {
+             clipchildren 1
+             position 0 0.01715
+             size 0.9 45
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             scaled 1
+             {
+              ButtonWidgetClass HtmlWidget1 {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 1 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               scaled 0
+               text "Hello"
+               text_offset 20 0
+               text_halign left
+               font "gui/fonts/etelkatextpro16"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+              }
+              ImageWidgetClass ImageWidget10 {
+               ignorepointer 1
+               color 0.2 0.3412 0.7686 0.1686
+               position 0 0
+               size 3 1
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+             }
+            }
+            FrameWidgetClass PDA_ListMenu_Entry1 {
+             clipchildren 1
+             position 0 0.01715
+             size 0.9 45
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             scaled 1
+             {
+              ButtonWidgetClass HtmlWidget2 {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 1 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               scaled 0
+               text "Hello"
+               text_offset 20 0
+               text_halign left
+               font "gui/fonts/etelkatextpro16"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+              }
+              ImageWidgetClass ImageWidget12 {
+               ignorepointer 1
+               color 0.2 0.3412 0.7686 0.1686
+               position 0 0
+               size 3 1
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+             }
+            }
+            FrameWidgetClass PDA_ListMenu_Entry2 {
+             clipchildren 1
+             position 0 0.01715
+             size 0.9 45
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             scaled 1
+             {
+              ButtonWidgetClass HtmlWidget3 {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 1 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               scaled 0
+               text "Hello"
+               text_offset 20 0
+               text_halign left
+               font "gui/fonts/etelkatextpro16"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+              }
+              ImageWidgetClass ImageWidget13 {
+               ignorepointer 1
+               color 0.2 0.3412 0.7686 0.1686
+               position 0 0
+               size 3 1
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+             }
+            }
+            FrameWidgetClass PDA_ListMenu_Entry3 {
+             clipchildren 1
+             position 0 0.01715
+             size 0.9 45
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             scaled 1
+             {
+              ButtonWidgetClass HtmlWidget4 {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 1 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               scaled 0
+               text "Hello"
+               text_offset 20 0
+               text_halign left
+               font "gui/fonts/etelkatextpro16"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+              }
+              ImageWidgetClass ImageWidget14 {
+               ignorepointer 1
+               color 0.2 0.3412 0.7686 0.1686
+               position 0 0
+               size 3 1
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+             }
+            }
+            FrameWidgetClass PDA_ListMenu_Entry4 {
+             clipchildren 1
+             position 0 0.01715
+             size 0.9 45
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             scaled 1
+             {
+              ButtonWidgetClass HtmlWidget6 {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 1 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               scaled 0
+               text "Hello"
+               text_offset 20 0
+               text_halign left
+               font "gui/fonts/etelkatextpro16"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+              }
+              ImageWidgetClass ImageWidget15 {
+               ignorepointer 1
+               color 0.2 0.3412 0.7686 0.1686
+               position 0 0
+               size 3 1
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+             }
+            }
+            FrameWidgetClass PDA_ListMenu_Entry5 {
+             clipchildren 1
+             position 0 0.01715
+             size 0.9 45
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             scaled 1
+             {
+              ButtonWidgetClass HtmlWidget7 {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 1 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               scaled 0
+               text "Hello"
+               text_offset 20 0
+               text_halign left
+               font "gui/fonts/etelkatextpro16"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+              }
+              ImageWidgetClass ImageWidget16 {
+               ignorepointer 1
+               color 0.2 0.3412 0.7686 0.1686
+               position 0 0
+               size 3 1
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+             }
+            }
+           }
+          }
+          PanelWidgetClass Border_Widget {
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            ImageWidgetClass Border_Top0 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign center_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Right0 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            ImageWidgetClass Border_Bottom0 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             halign center_ref
+             valign bottom_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Left0 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+           }
+          }
+         }
         }
-       }
-      }
-     }
-    }
-    PanelWidgetClass Bottom {
-     ignorepointer 1
-     position 0.011 10
-     size 0.984 30
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 1
-     hexactsize 0
-     vexactsize 1
-     {
-      ImageWidgetClass Bot_Widget_1 {
-       ignorepointer 1
-       color 0.1333 0.1333 0.1333 1
-       position 5 0
-       size 140.5 0.7
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 0
-       {
-        ImageWidgetClass ImageWidget0 {
+        PanelWidgetClass Content {
          ignorepointer 1
-         color 0.6706 0.6706 0.6706 0.698
-         position 0 0
-         size 0.95 0.75
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
+         position 0.01 0.0838
+         size 0.8 0.7
+         halign right_ref
+         hexactpos 0
+         vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{6B6E257A4E5708E0}CRDTN_Client/Data/devices/yellow_pattern_1042.edds"
+         {
+          ImageWidgetClass ContentBackground {
+           clipchildren 1
+           ignorepointer 1
+           color 0.1451 0.1451 0.1451 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           imageTexture "{6B6E257A4E5708E0}CRDTN_Client/Data/devices/yellow_pattern_1042.edds"
+          }
+          PanelWidgetClass Border_Widget0 {
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            ImageWidgetClass Border_Top1 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign center_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Right1 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            ImageWidgetClass Border_Bottom1 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             halign center_ref
+             valign bottom_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Left1 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+           }
+          }
+          ScrollWidgetClass Content_Factions {
+           ignorepointer 0
+           color 0.2824 0.2824 0.2824 0.8784
+           position 0 0
+           size 1 0.99
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           "Scrollbar V" 1
+           {
+            HtmlWidgetClass HtmlWidget5 {
+             ignorepointer 1
+             color 0.5765 0.5765 0.5765 1
+             position 0 0.09951
+             size 0.9 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             scaled 1
+             draggable 1
+             text "<div>"\
+             "<h1>Loners</h1>"\
+             "<p> Hello body</p>"\
+             "<p>Loners are a nomadic semi-unified group of Stalkers who simply live off the Zone in order to earn some coin for their"\
+             "    daily lives. Loners are neutral toward almost all other factions, but do have complications with the Military, and,"\
+             "    to a lesser extent, the Mercenaries, and openly oppose the Bandit faction for their actions against free Stalkers."\
+             "    Most Loners are only concerned with the riches of the Zone, and do not pay attention to the other factions' hatred"\
+             "    for each other - provided, of course, they do not threaten them. Because of this, Loners are often recruited by"\
+             "    various factions as mercenaries."\
+             "</p>"\
+             "</div>"\
+             "<h1>Loners</h1>"\
+             "<p> Hello body</p>"\
+             "<p>Loners are a nomadic semi-unified group of Stalkers who simply live off the Zone in order to earn some coin for their"\
+             "    daily lives. Loners are neutral toward almost all other factions, but do have complications with the Military, and,"\
+             "    to a lesser extent, the Mercenaries, and openly oppose the Bandit faction for their actions against free Stalkers."\
+             "    Most Loners are only concerned with the riches of the Zone, and do not pay attention to the other factions' hatred"\
+             "    for each other - provided, of course, they do not threaten them. Because of this, Loners are often recruited by"\
+             "    various factions as mercenaries."\
+             "</p>"\
+             "</div>"\
+             "<div>"\
+             "<h1>Loners</h1>"\
+             "<p> Hello body</p>"\
+             "<p>Loners are a nomadic semi-unified group of Stalkers who simply live off the Zone in order to earn some coin for their"\
+             "    daily lives. Loners are neutral toward almost all other factions, but do have complications with the Military, and,"\
+             "    to a lesser extent, the Mercenaries, and openly oppose the Bandit faction for their actions against free Stalkers."\
+             "    Most Loners are only concerned with the riches of the Zone, and do not pay attention to the other factions' hatred"\
+             "    for each other - provided, of course, they do not threaten them. Because of this, Loners are often recruited by"\
+             "    various factions as mercenaries."\
+             "</p>"\
+             "</div><div>"\
+             "<h1>Loners</h1>"\
+             "<p> Hello body</p>"\
+             "<p>Loners are a nomadic semi-unified group of Stalkers who simply live off the Zone in order to earn some coin for their"\
+             "    daily lives. Loners are neutral toward almost all other factions, but do have complications with the Military, and,"\
+             "    to a lesser extent, the Mercenaries, and openly oppose the Bandit faction for their actions against free Stalkers."\
+             "    Most Loners are only concerned with the riches of the Zone, and do not pay attention to the other factions' hatred"\
+             "    for each other - provided, of course, they do not threaten them. Because of this, Loners are often recruited by"\
+             "    various factions as mercenaries."\
+             "</p>"\
+             "</div>"\
+             "<h1>Loners</h1>"\
+             "<p> Hello body</p>"\
+             "<p>Loners are a nomadic semi-unified group of Stalkers who simply live off the Zone in order to earn some coin for their"\
+             "    daily lives. Loners are neutral toward almost all other factions, but do have complications with the Military, and,"\
+             "    to a lesser extent, the Mercenaries, and openly oppose the Bandit faction for their actions against free Stalkers."\
+             "    Most Loners are only concerned with the riches of the Zone, and do not pay attention to the other factions' hatred"\
+             "    for each other - provided, of course, they do not threaten them. Because of this, Loners are often recruited by"\
+             "    various factions as mercenaries."\
+             "</p>"\
+             "</div>"\
+             "<div>"\
+             "<h1>Loners</h1>"\
+             "<p> Hello body</p>"\
+             "<p>Loners are a nomadic semi-unified group of Stalkers who simply live off the Zone in order to earn some coin for their"\
+             "    daily lives. Loners are neutral toward almost all other factions, but do have complications with the Military, and,"\
+             "    to a lesser extent, the Mercenaries, and openly oppose the Bandit faction for their actions against free Stalkers."\
+             "    Most Loners are only concerned with the riches of the Zone, and do not pay attention to the other factions' hatred"\
+             "    for each other - provided, of course, they do not threaten them. Because of this, Loners are often recruited by"\
+             "    various factions as mercenaries."\
+             "</p>"\
+             "</div>"
+             font "gui/fonts/etelkatextpro22"
+             "exact text" 1
+             "size to text v" 1
+             wrap 1
+             "condense whitespace" 1
+             "strip newlines" 1
+            }
+           }
+          }
+          PanelWidgetClass Content_Ranks {
+           ignorepointer 1
+           position 0 0
+           size 0.98 0.98
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+          }
+          PanelWidgetClass Content_Factions1 {
+           ignorepointer 1
+           position 0 0
+           size 0.98 0.98
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+          }
+          PanelWidgetClass Content_Factions2 {
+           ignorepointer 1
+           position 0 0
+           size 0.98 0.98
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+          }
+         }
         }
-       }
-      }
-      ImageWidgetClass Bot_Widget_0 {
-       ignorepointer 1
-       color 0.1333 0.1333 0.1333 1
-       position 150 0
-       size 140.5 0.7
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 0
-       {
-        ImageWidgetClass ImageWidget1 {
+        PanelWidgetClass Top {
          ignorepointer 1
-         color 0.6706 0.6706 0.6706 0.698
-         position 0 0
-         size 0.95 0.75
+         position 0.0003 6
+         size 0.98 60
          halign center_ref
-         valign center_ref
-         hexactpos 1
+         hexactpos 0
          vexactpos 1
          hexactsize 0
-         vexactsize 0
-         imageTexture "{6B6E257A4E5708E0}CRDTN_Client/Data/devices/yellow_pattern_1042.edds"
+         vexactsize 1
+         {
+          ImageWidgetClass ContentBackground1 {
+           clipchildren 1
+           ignorepointer 1
+           color 0.1451 0.1451 0.1451 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           imageTexture "{6B6E257A4E5708E0}CRDTN_Client/Data/devices/yellow_pattern_1042.edds"
+          }
+          FrameWidgetClass TopLeft {
+           ignorepointer 1
+           position 1 -0.33174
+           size 0.28104 0.65433
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           {
+            MultilineTextWidgetClass MultilineTextWidget0 {
+             ignorepointer 1
+             position 0 0
+             size 0.8 0.8
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style None
+             text "PDA ver. 0.1"
+             font "gui/fonts/etelkatextpro22"
+             "exact text" 0
+            }
+           }
+          }
+          FrameWidgetClass TopCenter {
+           ignorepointer 1
+           position 0.16916 0
+           size 0.63832 0.4
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            GridSpacerWidgetClass GridWrapper {
+             ignorepointer 1
+             position 0 0
+             size 1 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             Columns 6
+             Rows 1
+             {
+              ButtonWidgetClass "Close Button0" {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 150 0.99
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               scaled 0
+               text "HOME"
+               text_offset 20 0
+               text_halign right
+               font "gui/fonts/etelkatextpro22"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+               {
+                ImageWidgetClass ImageWidget18 {
+                 ignorepointer 1
+                 color 0.2 0.3412 0.7686 0.1686
+                 position 0 0
+                 size 3 1
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 0
+                 hexactsize 1
+                 vexactsize 0
+                }
+               }
+              }
+              ButtonWidgetClass "Close Button1" {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 150 0.99
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               scaled 0
+               text "FACTIONS"
+               text_offset 20 0
+               text_halign right
+               font "gui/fonts/etelkatextpro22"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+               {
+                ImageWidgetClass ImageWidget19 {
+                 ignorepointer 1
+                 color 0.2 0.3412 0.7686 0.1686
+                 position 0 0
+                 size 3 1
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 0
+                 hexactsize 1
+                 vexactsize 0
+                }
+               }
+              }
+              ButtonWidgetClass "Close Button2" {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 150 0.99
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               scaled 0
+               text "QUEST LOG"
+               text_offset 20 0
+               text_halign right
+               font "gui/fonts/etelkatextpro22"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+               {
+                ImageWidgetClass ImageWidget110 {
+                 ignorepointer 1
+                 color 0.2 0.3412 0.7686 0.1686
+                 position 0 0
+                 size 3 1
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 0
+                 hexactsize 1
+                 vexactsize 0
+                }
+               }
+              }
+              ButtonWidgetClass "Close Button3" {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 150 0.99
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               scaled 0
+               text "RANKS"
+               text_offset 20 0
+               text_halign right
+               font "gui/fonts/etelkatextpro22"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+               {
+                ImageWidgetClass ImageWidget111 {
+                 ignorepointer 1
+                 color 0.2 0.3412 0.7686 0.1686
+                 position 0 0
+                 size 3 1
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 0
+                 hexactsize 1
+                 vexactsize 0
+                }
+               }
+              }
+              ButtonWidgetClass "Close Button4" {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 150 0.99
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               scaled 0
+               text "CLAN"
+               text_offset 20 0
+               text_halign right
+               font "gui/fonts/etelkatextpro22"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+               {
+                ImageWidgetClass ImageWidget112 {
+                 ignorepointer 1
+                 color 0.2 0.3412 0.7686 0.1686
+                 position 0 0
+                 size 3 1
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 0
+                 hexactsize 1
+                 vexactsize 0
+                }
+               }
+              }
+              ButtonWidgetClass "Close Button5" {
+               ignorepointer 0
+               color 0.0824 0.1569 0.3059 1
+               position 0 0
+               size 150 0.99
+               halign right_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               scaled 0
+               text "FRIENDS"
+               text_offset 20 0
+               text_halign right
+               font "gui/fonts/etelkatextpro22"
+               "text color" 0.6627 0.6627 0.6627 1
+               "disabled text color" 0.6627 0.6627 0.6627 1
+               switch normal
+               {
+                ImageWidgetClass ImageWidget113 {
+                 ignorepointer 1
+                 color 0.2 0.3412 0.7686 0.1686
+                 position 0 0
+                 size 3 1
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 0
+                 hexactsize 1
+                 vexactsize 0
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          PanelWidgetClass Border_Widget1 {
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            ImageWidgetClass Border_Top2 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign center_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Right2 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            ImageWidgetClass Border_Bottom2 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             halign center_ref
+             valign bottom_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Left2 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+           }
+          }
+         }
+        }
+        PanelWidgetClass Bottom {
+         ignorepointer 1
+         position 0 20
+         size 0.98 48.058
+         halign center_ref
+         valign bottom_ref
+         hexactpos 0
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         {
+          ImageWidgetClass ContentBackground2 {
+           clipchildren 1
+           ignorepointer 1
+           color 0.1451 0.1451 0.1451 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           imageTexture "{6B6E257A4E5708E0}CRDTN_Client/Data/devices/yellow_pattern_1042.edds"
+          }
+          PanelWidgetClass Border_Widget2 {
+           ignorepointer 1
+           position 0 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            ImageWidgetClass Border_Top3 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign center_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Right3 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             position 0 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            ImageWidgetClass Border_Bottom3 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             halign center_ref
+             valign bottom_ref
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            ImageWidgetClass Border_Left3 {
+             ignorepointer 1
+             color 0.149 0.149 0.149 1
+             size 1 1
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+           }
+          }
+          XComboBoxWidgetClass XComboBoxWidget0 {
+           size 48 48
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          ButtonWidgetClass "Close Button" {
+           ignorepointer 0
+           color 0.0824 0.1569 0.3059 1
+           position 0 0
+           size 150 0.99
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 0
+           hexactsize 1
+           vexactsize 0
+           scaled 0
+           text "Close"
+           text_offset 20 0
+           text_halign right
+           font "gui/fonts/etelkatextpro22"
+           "text color" 0.6627 0.6627 0.6627 1
+           "disabled text color" 0.6627 0.6627 0.6627 1
+           switch normal
+           {
+            ImageWidgetClass ImageWidget17 {
+             ignorepointer 1
+             color 0.2 0.3412 0.7686 0.1686
+             position 0 0
+             size 3 1
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+           }
+          }
+         }
         }
        }
       }

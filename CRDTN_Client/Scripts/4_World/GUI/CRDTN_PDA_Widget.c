@@ -3,7 +3,10 @@ class CRDTN_PDA_Widget : UIScriptedMenu
 
     private Widget m_Parent;
 
+    private PlayerBase m_PlayerBase;
+
     bool m_IsActive = false;
+    bool m_IsInitialized = false;
 
     void SetParent(Widget parent)
     {
@@ -12,8 +15,12 @@ class CRDTN_PDA_Widget : UIScriptedMenu
 
     override Widget Init()
     {
+        if(m_IsInitialized)
+            return layoutRoot;
+        m_PlayerBase = PlayerBase.Cast(GetGame().GetPlayer());
         Print(CRDTN_MOD_PREFIX + " CRDTN_PDA_Widget::Init()");
         layoutRoot = GetGame().GetWorkspace().CreateWidgets(CRDTN_UI_LAYOUT_PDA_MAIN, m_Parent);
+        m_IsInitialized = true;
         return layoutRoot;
     }
 
@@ -24,23 +31,23 @@ class CRDTN_PDA_Widget : UIScriptedMenu
 
     override void OnShow()
     {
-        Print(CRDTN_MOD_PREFIX + " CRDTN_PDA_Widget::OnShow()");
         super.OnShow();
-        GetGame().GetInput().ChangeGameFocus(1);
-        SetFocus(layoutRoot);
-        PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
-        player.GetInputController().SetDisabled(true);
-        player.GetActionManager().EnableActions(false);
+        Print(CRDTN_MOD_PREFIX + " CRDTN_PDA_Widget::OnShow()");
+	    PPEffects.SetBlurDrunk(0.9);
+		GetGame().GetInput().ChangeGameFocus(1);
+        GetGame().GetUIManager().ShowUICursor(true);
+        m_PlayerBase.GetActionManager().EnableActions(false);
+		SetFocus(layoutRoot);
     }
 
     override void OnHide()
     {
-        Print(CRDTN_MOD_PREFIX + " CRDTN_PDA_Widget::OnHide()");
         super.OnHide();
-        GetGame().GetInput().ResetGameFocus();
-        PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
-        player.GetInputController().SetDisabled(false);
-        player.GetActionManager().EnableActions(true);
+        Print(CRDTN_MOD_PREFIX + " CRDTN_PDA_Widget::OnHide()");
+		PPEffects.SetBlurDrunk(0);
+        GetGame().GetUIManager().ShowUICursor(false);
+		GetGame().GetInput().ResetGameFocus();
+        m_PlayerBase.GetActionManager().EnableActions(true);
         Close();
     }
 

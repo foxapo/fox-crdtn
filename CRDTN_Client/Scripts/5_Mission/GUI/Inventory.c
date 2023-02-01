@@ -30,9 +30,6 @@ modded class Inventory
         m_CharacterPhoto = ImageWidget.Cast(m_RootWidget.FindAnyWidget(CRDTN_UI_LAYOUT_CHARACTER_PHOTO_W));
         m_CharacterFaction = MultilineTextWidget.Cast(m_RootWidget.FindAnyWidget(CRDTN_UI_LAYOUT_CHARACTER_FACTION_W));
         m_CharacterRank = MultilineTextWidget.Cast(m_RootWidget.FindAnyWidget(CRDTN_UI_LAYOUT_CHARACTER_RANK_W));
-
-        GetDayZGame().CRDTNGetEventHandler().GetEventInvoker(CRDTN_EVT_PLAYER_FACTION_SYNC).Insert(InitCharacterPanel);
-        // GetDayZGame().CRDTNGetEventHandler().GetEventInvoker(CRDTN_EVT_PLAYER_INVENTORY_VICINITY_OPEN).Insert(InitVicinityPanel);
     }
 
     override void OnShow()
@@ -47,12 +44,12 @@ modded class Inventory
 
     void InitCharacterPanel()
     {
-        if(m_PluginUserClient)
+        if(m_PluginUserClient && m_PluginUserClient.IsInitialized())
         {
             m_CharacterName.SetText(m_PluginUserClient.GetPlayerName());
         }
 
-        if(m_PluginFactionsClient)
+        if(m_PluginFactionsClient && m_PluginFactionsClient.IsInitialized())
         {
             m_CharacterFaction.SetText(m_PluginFactionsClient.GetFactionNameById(m_PluginFactionsClient.GetUserFaction().Faction_ID));
             m_CharacterRank.SetText(m_PluginFactionsClient.GetRankNameById(m_PluginFactionsClient.GetUserFaction().Rank));

@@ -11,7 +11,7 @@ modded class ModItemRegisterCallbacks
     void RegisterTwoHanded(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
     {
         super.RegisterTwoHanded(pType, pBehavior);
-        pType.AddItemInHandsProfileIK("CRDTN_PDA", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, /*"CRDTN_Client/Data/Animations/PDA.anm"*/ "dz/anims/anm/player/ik/two_handed/BatteryCar.anm");
+        pType.AddItemInHandsProfileIK("CRDTN_PDA", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, /*"CRDTN_Client/Data/Animations/PDA.anm"*/ "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
     }
 
 };

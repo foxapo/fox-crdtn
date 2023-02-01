@@ -5822,9 +5822,10 @@ FrameWidgetClass HudFrameWidget {
     }
     PanelWidgetClass CRDTN_PDA_Panel {
      ignorepointer 1
+     position 0 90
      size 941.31201 509.23801
      halign center_ref
-     valign center_ref
+     valign bottom_ref
      hexactpos 1
      vexactpos 1
      hexactsize 1

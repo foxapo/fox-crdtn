@@ -1,0 +1,30 @@
+FrameWidgetClass PDA_ListMenu_Entry {
+ position 0 0
+ size 0.9 0.9
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  HtmlWidgetClass HtmlWidget0 {
+   ignorepointer 1
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   text "<b>Text of the menu entry </b>"
+   font "gui/fonts/etelkatextpro48"
+   "exact text" 1
+   "size to text h" 1
+   "size to text v" 1
+   "text valign" center
+  }
+ }
+}
