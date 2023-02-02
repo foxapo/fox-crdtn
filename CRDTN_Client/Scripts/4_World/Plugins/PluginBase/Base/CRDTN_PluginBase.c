@@ -20,4 +20,5 @@ class CRDTN_PluginBase : PluginBase
     void InitData();
     
     void ParseData();
-};
+    
+}

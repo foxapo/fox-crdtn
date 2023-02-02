@@ -4,6 +4,9 @@ modded class MissionGameplay
 
     override void OnInit()
     {
+
+        Print(CRDTN_MOD_PREFIX + " Initializing MissionGameplay");
+
         if (!m_HudRootWidget)
         {
             m_HudRootWidget = GetGame().GetWorkspace().CreateWidgets(CRDTN_UI_LAYOUT_MAIN_HUD);

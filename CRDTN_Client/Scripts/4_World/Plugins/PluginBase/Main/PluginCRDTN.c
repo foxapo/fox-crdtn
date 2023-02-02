@@ -16,4 +16,4 @@ class PluginCRDTN : PluginBase
         }
 
     }
-}
+};

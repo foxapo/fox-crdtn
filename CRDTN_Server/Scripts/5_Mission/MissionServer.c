@@ -30,7 +30,4 @@ modded class MissionServer
             pluginFactions.GetFactionUserById(CallType.Server, null, identity, player);
         }
     }
-
-
-
-}
+};

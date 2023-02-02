@@ -16,9 +16,11 @@ class CfgMods
         credits = "Big Kudos to guys from the Renegade Stalker Server for providing valuable information";
         author = "foxapo/freeman/greyfox";
         type = "mod";
+        dir = "CRDTN_Server";
         dependencies[] = {"World", "Mission"};
         class defs
         {
+
             class worldScriptModule
             {
                 value = "";

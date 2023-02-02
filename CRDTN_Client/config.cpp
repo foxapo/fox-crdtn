@@ -6,15 +6,13 @@ class CfgPatches
         weapons[] = {};
         requiredVersion = 0.1;
         requiredAddons[] = {
-            "DZ_Data", 
-            "DZ_Scripts",
-            "sVisual"};
+            "DZ_Data",
+            "DZ_Scripts"};
     };
 };
 
 class CfgMods
 {
-
     class CRDTN_Client
     {
         name = "FOX Coradiation ClientMod";
@@ -22,8 +20,7 @@ class CfgMods
         author = "foxapo/freeman/greyfox";
         type = "mod";
         dependencies[] = {"Game", "World", "Mission"};
-        dir = "CRDTN_Client";
-
+        dir ="CRDTN_Client";
         class defs
         {
             class gameScriptModule
@@ -45,15 +42,13 @@ class CfgMods
     };
 };
 
-class CfgSlots {};
-
 class CfgVehicles
 {
 
     // FACTION FINDER
 
     class ItemOptics;
-    class CRDTN_FactionFinderBase : ItemOptics 
+    class CRDTN_FactionFinderBase : ItemOptics
     {
         scope = 0;
         displayName = "Faction Finder";
@@ -71,11 +66,11 @@ class CfgVehicles
             memoryPointCamera = "eyeScope";
             cameraDir = "cameraDir";
             modelOptics = "\DZ\gear\optics\binoculars_view.p3d";
-			distanceZoomMin = 100;
-			distanceZoomMax = 100;
-			opticsZoomMin = 0.05;
-			opticsZoomMax = 0.05;
-			opticsZoomInit = 0.05;
+            distanceZoomMin = 100;
+            distanceZoomMax = 100;
+            opticsZoomMin = 0.05;
+            opticsZoomMax = 0.05;
+            opticsZoomInit = 0.05;
         };
         attachments[] = {"BatteryD"};
         class DamageSystem
@@ -85,12 +80,12 @@ class CfgVehicles
                 class Health
                 {
                     hitpoints = 70;
-                    healthLevels[] = 
-                    {{1.0, {"DZ\gear\optics\data\Rangefinder.rvmat"}}, 
-                    {0.7, {"DZ\gear\optics\data\Rangefinder.rvmat"}}, 
-                    {0.5, {"DZ\gear\optics\data\Rangefinder_damage.rvmat"}}, 
-                    {0.3, {"DZ\gear\optics\data\Rangefinder_damage.rvmat"}}, 
-                    {0.0, {"DZ\gear\optics\data\Rangefinder_destruct.rvmat"}}};
+                    healthLevels[] =
+                        {{1.0, {"DZ\gear\optics\data\Rangefinder.rvmat"}},
+                         {0.7, {"DZ\gear\optics\data\Rangefinder.rvmat"}},
+                         {0.5, {"DZ\gear\optics\data\Rangefinder_damage.rvmat"}},
+                         {0.3, {"DZ\gear\optics\data\Rangefinder_damage.rvmat"}},
+                         {0.0, {"DZ\gear\optics\data\Rangefinder_destruct.rvmat"}}};
                 };
             };
         };
@@ -130,6 +125,4 @@ class CfgVehicles
         displayName = "Faction Finder";
         descriptionShort = "Faction Finder";
     };
-
-
 };

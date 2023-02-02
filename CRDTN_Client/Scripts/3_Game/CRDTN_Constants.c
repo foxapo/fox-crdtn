@@ -39,3 +39,6 @@ const string CRDTN_UI_LAYOUT_FACTION_FINDER_CHAR_RANK = "FacitonFinderRank";
 
 const string CRDTN_UI_LAYOUT_PDA_PANEL_W = "CRDTN_PDA_Panel";
 const string CRDTN_UI_LAYOUT_PDA_MAIN = "CRDTN_Client/Layouts/PDA_Frame.layout";
+
+const string CRDTN_SOUND_INV_CLOSE = "SoundSet_InvClose";
+const string CRDTN_SOUND_INV_OPEN = "SoundSet_InvOpen";
