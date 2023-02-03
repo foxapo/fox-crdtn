@@ -6,8 +6,6 @@ modded class MissionServer
         Print(CRDTN_MOD_PREFIX + " Initializing Mission");
     }
 
-    
-
     override void InvokeOnConnect(PlayerBase player, PlayerIdentity identity)
     {
         super.InvokeOnConnect(player, identity);

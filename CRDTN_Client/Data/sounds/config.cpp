@@ -226,6 +226,7 @@ class CfgSoundShaders
         samples[] = {
             {"CRDTN_Client\Data\sounds\Items\inv_items_wpn_1", 1},
             {"CRDTN_Client\Data\sounds\Items\inv_items_wpn_2", 1},
+            {"CRDTN_Client\Data\sounds\weapons\generic_holster", 1}
         };
     };
 

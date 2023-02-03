@@ -10,6 +10,7 @@ const string CONFIG_MAIN = "main.json";
 const string CONFIG_USERS = "users.json";
 const string CONFIG_QUESTS = "db.json";
 const string CONFIG_FACTIONS = "factions.json";
+const string CONFIG_COMBAT = "combat.json";
 
 const string CRDTN_UI_LAYOUT_MAIN_HUD = "CRDTN_Client/Layouts/DayZ_Hud.layout";
 const string CRDTN_UI_LAYOUT_FACTION_PATCH_W = "FactionWidget";

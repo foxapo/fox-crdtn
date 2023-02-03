@@ -38,3 +38,13 @@ enum CRDTN_EQuestType
     Trade,
     _COUNT
 };
+
+/// @brief Used for in the combat to determine which kind of combat situation happened
+enum CRDTN_ECombatEvent
+{
+    _NONE,
+    PSI_HIT,
+    PSI_EXPLOSION,
+    PSI_KILLED,
+    _COUNT
+};

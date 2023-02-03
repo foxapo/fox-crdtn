@@ -20,6 +20,7 @@ modded class PluginManager
 			RegisterPlugin("PluginMainServer", false, true);
 			RegisterPlugin("PluginFactionsServer", false, true);
 			RegisterPlugin("PluginUsersServer", false, true);
+			RegisterPlugin("PluginCombatServer", false, true);
 		}
 		
 	}
