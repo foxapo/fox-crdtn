@@ -48,3 +48,13 @@ enum CRDTN_ECombatEvent
     PSI_KILLED,
     _COUNT
 };
+
+enum CRDTN_EEffectAreaType
+{
+    PSI
+};
+
+enum CRDTN_ETriggerType
+{
+    PSI
+};

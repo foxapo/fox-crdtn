@@ -3,24 +3,24 @@ class PluginCombatServer : CRDTN_PluginBase
     ref CRDTN_Combat cfg_Combat;
     ref map<int, ref CRDTN_UserCombatStat> UserCombatStats;
 
-    bool IsInitialized()
+    override bool IsInitialized()
     {
         return m_IsInitialized;
     }
 
-    void InitRPCs()
+    override void InitRPCs()
     {
         return;
     }
     
-    void InitData()
+    override void InitData()
     {
         super.InitData();
         cfg_Combat = new CRDTN_Combat();
         JsonFileLoader<ref CRDTN_Combat>.JsonLoadFile(MOD_PATH + CONFIG_COMBAT, cfg_Combat);
     }
     
-    void ParseData()
+    override void ParseData()
     {
         UserCombatStats = new map<int, ref CRDTN_UserCombatStat>();
         foreach (CRDTN_UserCombatStat userCombatStat : cfg_Combat.UserCombatStats)
@@ -40,12 +40,16 @@ class PluginCombatServer : CRDTN_PluginBase
         {
             UserCombatStats.Insert(killerId, new CRDTN_UserCombatStat(killerId));
         }
-
+        // TODO - Add support for registering kills by the player
+        // TODO - Also need to read data from the config about PPE and so on
         UserCombatStats.Get(killerId).RegisterKill(victimClassName);
         CRDTN_CreatureData combatData = new CRDTN_CreatureData();
         combatData.IsAlive = false;
+        combatData.Combatant = victimClassName;
+        combatData.CombatEvent = CRDTN_ECombatEvent.PSI_KILLED;
+
         Param1<CRDTN_CreatureData> param = new Param1<CRDTN_CreatureData>(combatData);
-        Print("Phantom Animal EEKilled - RPC" + combatData.IsAlive + " " + combatData.IsPlayerInRange + " " + combatData.CombatLevel);
+        Print("Phantom Animal EEKilled - RPC" + combatData.IsAlive + " " + combatData.IsPlayerInRange + " " + combatData.CombatEvent);
         GetRPCManager().SendRPC(CRDTN_MOD_PREFIX, "OnCombatDataReceived", new Param1<CRDTN_CreatureData>(combatData), true, killer);
     }
 
@@ -55,6 +59,7 @@ class PluginCombatServer : CRDTN_PluginBase
     void SendCombatDataToPlayer(PlayerIdentity player, CRDTN_CreatureData combatData)
     {
         int playerId = CRDTN_GlobalUtils.ParseID(player.GetPlainId());
+        Print("Sending combat data to player: " + playerId + " " + combatData.IsAlive + " " + combatData.Combatant + " " + combatData.CombatEvent);
         GetRPCManager().SendRPC(CRDTN_MOD_PREFIX, "OnCombatDataReceived", new Param1<CRDTN_CreatureData>(combatData), true, player);
     }
 

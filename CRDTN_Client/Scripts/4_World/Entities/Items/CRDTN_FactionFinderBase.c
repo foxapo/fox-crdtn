@@ -242,7 +242,7 @@ class CRDTN_FactionFinderBase extends PoweredOptic_Base
         }
     }
 
-    void SetActions()
+    override void SetActions()
     {
         super.SetActions();
 

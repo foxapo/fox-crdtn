@@ -82,8 +82,7 @@ class CfgSoundShaders
 		samples[] = {
 			{"CRDTN_Client\Data\sounds\weapons\GLOCK\glock_shoot", 1},
 			{"CRDTN_Client\Data\sounds\weapons\GLOCK\glock_shoot1", 1},
-			{"CRDTN_Client\Data\sounds\weapons\GLOCK\glock_shoot2", 1},
-			{"CRDTN_Client\Data\sounds\weapons\GLOCK\glock_shoot_alt", 1}
+			{"CRDTN_Client\Data\sounds\weapons\GLOCK\glock_shoot2", 1}
 			};
 	};
 	class Glock19_silencerCloseShot_SoundShader : base_ProfessionalSilenced_closeShot_SoundShader
@@ -97,13 +96,20 @@ class CfgSoundShaders
 
 	class AK_closeShot_SoundShader : closeShotRifle_SoundShader
 	{
-		samples[] = {{"CRDTN_Client\Data\sounds\weapons\AK74\ak74_shoot", 1}};
+		samples[] = {
+			{"CRDTN_Client\Data\sounds\weapons\ak103\ak103_shoot", 1},
+			{"CRDTN_Client\Data\sounds\weapons\ak103\ak103_shoot1", 1},
+			{"CRDTN_Client\Data\sounds\weapons\ak103\ak103_shoot2", 1},
+			{"CRDTN_Client\Data\sounds\weapons\ak103\ak103_shoot3", 1},
+			{"CRDTN_Client\Data\sounds\weapons\ak103\ak103_shoot4", 1},
+			{"CRDTN_Client\Data\sounds\weapons\ak103\ak103_shoot5", 1},
+		};
 		volume = 0.70794576;
 	};
 
 	class AK_silencerCloseShot_SoundShader : base_ProfessionalSilenced_closeShot_SoundShader
 	{
-		samples[] = {{"CRDTN_Client\Data\sounds\weapons\AK74\ak74_shot_sil", 1}};
+		samples[] = {{"CRDTN_Client\Data\sounds\weapons\ak\ak_shot_sil", 1}};
 		volume = 1.0;
 	};
 

@@ -29,7 +29,7 @@ class PluginUsersServer : PluginUsersBase
         Print(CRDTN_MOD_PREFIX + " Users parsed!");
     }
 
-    void LoginUser(CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target)
+    override void LoginUser(CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target)
     {
         if (!sender || type != CallType.Server)
         {
@@ -53,7 +53,7 @@ class PluginUsersServer : PluginUsersBase
         }
     }
 
-    void RegisterUser(CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target)
+    override void RegisterUser(CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target)
     {
         if (!sender || type != CallType.Server)
         {

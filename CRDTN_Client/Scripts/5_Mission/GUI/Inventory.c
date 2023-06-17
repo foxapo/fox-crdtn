@@ -72,16 +72,29 @@ modded class Inventory
 
     void InitVicinityPanel()
     {
-        auto vicinity_manager = VicinityItemManager.GetInstance();
-
-        foreach(EntityAI ent : vicinity_manager.GetVicinityItems())
+        VicinityItemManager vicinity_manager = VicinityItemManager.GetInstance();
+        if(!vicinity_manager)
         {
-            if(ent.IsDayZCreature() || ent.IsMan())
-            {
-                SetInitVicinityPanel(ent);
-                return;
-            }
+            return;
         }
+        
+        ref array<EntityAI> objects = vicinity_manager.GetVicinityItems();
+        if(!objects)
+        {
+            return;
+        }
+
+        foreach(EntityAI ent : objects)
+        {
+            if(!ent.IsMan() && !ent.IsDayZCreature())
+            {
+                continue;
+            }
+
+            SetInitVicinityPanel(ent);
+            return;
+        }
+        
         UnsetVicinityPanel();
     }
 

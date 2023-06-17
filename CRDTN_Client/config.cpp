@@ -1,23 +1,37 @@
 class CfgPatches
 {
+
+    ///-----------------------------------------------------------------------------------------------------------------
+    /// CORADIATION CLIENTMOD
+    /// @brief This is the clientmod for the Coradiation mod
+    /// FoxApoGames All Rights Resreved (c) 2023
+    /// www.foxapo.com
+    /// If you want to use this mod in your mod, please contact me first @freeman
+    ///-----------------------------------------------------------------------------------------------------------------
+    /// @brief Big thanks to the creator of CSO - Complete sound overhaul
+    /// Also thanks to the guys from the Renegade Stalker Server for providing valuable information
+    /// @details https://steamcommunity.com/sharedfiles/filedetails/?id=2810590959
+    ///
     class CRDTN_Client
     {
-        units[] = {};
+        units[] = {"CRDTN_FactionFinder"};
         weapons[] = {};
         requiredVersion = 0.1;
-        requiredAddons[] = {
-            "DZ_Data",
-            "DZ_Scripts"};
+        requiredAddons[] =
+            {
+                "DZ_Data",
+                "DZ_Scripts"};
     };
 };
 
 class CfgMods
 {
+    /// @brief
     class CRDTN_Client
     {
         name = "FOX Coradiation ClientMod";
         credits = "Big Kudos to guys from the Renegade Stalker Server for providing valuable information";
-        author = "foxapo/freeman/greyfox";
+        author = "foxapo/freeman/greyfox  --> dev@foxapo.com <--";
         type = "mod";
         dependencies[] = {"Game", "World", "Mission"};
         dir = "CRDTN_Client";
@@ -37,6 +51,10 @@ class CfgMods
             {
                 value = "";
                 files[] = {"CRDTN_Client/Scripts/5_Mission"};
+            };
+            class imageSets
+            {
+                files[] = {};
             };
         };
     };
@@ -75,17 +93,17 @@ class Cfg_sUDE
                 // chrom_aber_power_y = 0.0;
                 // film_grain_sharpness = 0.0;
                 // film_grain_grain_size = 0.0;
-                // godrays_sun_intensity = 0.8;
-                // godrays_sun_overburn_intensity = 0.25;
-                // godrays_sun_overburn_start = 0.025;
-                // godrays_sun_overburn_end = 0.175;
+                godrays_sun_intensity = 0.8;
+                godrays_sun_overburn_intensity = 0.25;
+                godrays_sun_overburn_start = 0.025;
+                godrays_sun_overburn_end = 0.175;
                 // godrays_sun_mask = 0.8;
                 // godrays_sun_size = 0.15;
-                // godrays_sun_v_intensity = 0.75;
-                // godrays_sun_d_intensity = 0.60;
+                godrays_sun_v_intensity = 0.75;
+                godrays_sun_d_intensity = 0.60;
                 // vignette_color[] = {0.0, 0.0, 0.0, 0.0};
-                // overlay_color[] = {0.0, 0.0, 0.0, 0.0};
-                colorization[] = {1.0, 1.0, 1.0, 1.0};
+                overlay_color[] = {0.0, 0.0, 0.0, 0.0};
+                colorization[] = {1.0, 1.0, 0.5, 1.0};
             };
         };
     };
@@ -93,6 +111,25 @@ class Cfg_sUDE
 
 class CfgVehicles
 {
+
+    class Inventory_Base;
+
+    class Paper : Inventory_Base {};
+    class WeaponPartBase : Paper
+    {
+        scope = 1;
+    };
+
+    class WeaponPartReceiverAK : WeaponPartBase
+    {
+        scope = 2;
+        displayName = "AK Receiver";
+        descriptionShort = "AK Receiver";
+        model = "\dz\gear\consumables\Paper.p3d";
+        weight = 0.1;
+        itemSize[] = {1, 1};
+        inventorySlot[] = {"weaponPartReceiverAK"};
+    };
 
     // FACTION FINDER
 
@@ -173,5 +210,40 @@ class CfgVehicles
         scope = 2;
         displayName = "Faction Finder";
         descriptionShort = "Faction Finder";
+    };
+
+    // class House {};
+    // class EffectArea : House {};
+
+    // class CRDTN_EffectArea : EffectArea
+    // {
+    //     scope = 0;
+    // };
+
+    // class CRDTN_PSIArea : CRDTN_EffectArea
+    // {
+    //     scope = 2;
+    // };
+};
+
+class CfgSlots
+{
+    class Slot_weaponPartReceiverAK
+    {
+        name = "weaponPartReceiverAK";
+        displayName = "AK Receiver";
+        ghostIcon = "set:dayz_inventory image:missing";
+    };
+};
+
+// Weapons
+class CfgWeapons
+{
+    class Rifle_Base;
+    class AK74_Base : Rifle_Base {};
+    class AK74 : AK74_Base {};
+    class AK74WithParts : AK74
+    {
+        attachments[] = {"weaponPartReceiverAK", "weaponButtstockAK","WeaponHandguardAK","weaponWrap","weaponOpticsAK","weaponFlashlight","weaponMuzzleAK","weaponBayonetAK"};
     };
 };

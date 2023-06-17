@@ -17,10 +17,14 @@ class CfgMods
         author = "foxapo/freeman/greyfox";
         type = "mod";
         dir = "CRDTN_Server";
-        dependencies[] = {"World", "Mission"};
+        dependencies[] = {"Game", "World", "Mission"};
         class defs
         {
-
+            class gameScriptModule
+            {
+                value = "";
+                files[] = {"CRDTN_Server/Scripts/3_Game"};
+            };
             class worldScriptModule
             {
                 value = "";

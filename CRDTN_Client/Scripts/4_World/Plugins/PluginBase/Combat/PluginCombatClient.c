@@ -2,7 +2,7 @@ class PluginCombatClient : CRDTN_PluginBase
 {
 
     #ifdef S_VISUAL 
-    private CRDTN_S_FX_PsiHitAnim psiHitEffect; 
+    private ref CRDTN_S_FX_PsiHitAnim psiHitEffect; 
     #endif
     #ifndef S_VISUAL
     ref PPERequester_Creatures m_PPERequester;
@@ -36,8 +36,8 @@ class PluginCombatClient : CRDTN_PluginBase
         {
             return;
         }
-        Print("OnCombatDataReceived: " + data.param1.Combatant + " " + data.param1.IsAlive + " " + data.param1.IsPlayerInRange + " " + data.param1.CombatLevel);
-        ValidateCombat(data.param1);
+        // TODO: Here might come some tweaking what actually the values are needed for the client.
+        Print("OnCombatDataReceived: " + data.param1.Combatant + " " + data.param1.IsAlive + " " + data.param1.IsPlayerInRange + " " + data.param1.CombatEvent);
     }
 
     void OnCombatTargetKilled(CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target)
@@ -49,29 +49,19 @@ class PluginCombatClient : CRDTN_PluginBase
         Print("OnCombatTargetKilled");
     }
 
-    private void ValidateCombat(CRDTN_CreatureData data)
-    {
-        if(data.IsAlive)
-        {
-            HandleInCombat(data);
-        }
-        else
-        {
-            HandleEndOfCombat(data);
-        }
-    }
+
 
     private void HandleInCombat(CRDTN_CreatureData data)
     {     
         // Send notification that you hit the combatant
-        Print("You hit " + data.Combatant + " with " + data.CombatResults.NumOfHits + " hits.");
+        Print("You hit " + data.Combatant);
         HandlePostProcessingEffects(data);
     }
 
     private void HandleEndOfCombat(CRDTN_CreatureData data)
     {
         // Send notification that you killed the combatant
-        Print("You killed " + data.Combatant + " with " + data.CombatResults.NumOfHits + " hits.");
+        Print("You killed " + data.Combatant);
         HandlePostProcessingEffects(data);
     }
 
@@ -85,11 +75,15 @@ class PluginCombatClient : CRDTN_PluginBase
 
         // SVisual usage
         #ifdef S_VISUAL
+            Print("S_VISUAL");
             HandleSVisualPPE(data.CombatEvent);
+            return;
         #endif
         // Vanilla usage
         #ifndef S_VISUAL
+            Print("Vanilla");
             HandlePPEffects(data.CombatEvent);
+            return;
         #endif
     }
 
@@ -98,6 +92,27 @@ class PluginCombatClient : CRDTN_PluginBase
     private void HandleSVisualPPE(CRDTN_ECombatEvent combatEvent)
     {
         
+        if(combatEvent == CRDTN_ECombatEvent.PSI_HIT)
+        {
+            Print("PSI HIT");
+            if(!psiHitEffect)
+            {
+                psiHitEffect = new CRDTN_S_FX_PsiHitAnim(1);
+            }
+
+
+            if(psiHitEffect.isPlaying())
+            {
+                psiHitEffect.ChangeLevel(1);
+            }
+            else
+            {
+                PPEManager.Activate(psiHitEffect);
+            }
+            return;
+        }
+
+
         switch(combatEvent)
             {
                 case CRDTN_ECombatEvent._NONE:
@@ -118,7 +133,7 @@ class PluginCombatClient : CRDTN_PluginBase
                     }
                     else
                     {
-                        PPEManager.activate(psiHitEffect);
+                        PPEManager.Activate(psiHitEffect);
                     }
                     break;
                 case CRDTN_ECombatEvent.PSI_EXPLOSION:
@@ -168,6 +183,7 @@ class PluginCombatClient : CRDTN_PluginBase
                 {
                     m_PPERequester.ResetToDefault();
                 }   
+                break;
             default:
                 Print("Unknown combat event");
                 if(m_PPERequester)

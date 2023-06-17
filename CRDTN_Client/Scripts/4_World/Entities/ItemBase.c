@@ -1,5 +1,8 @@
 modded class ItemBase
 {
+
+    EffectSound sound = NULL;
+
     bool IsPdaDevice()
     {
         return false;
@@ -25,7 +28,7 @@ modded class ItemBase
         }
 
         string soundset = InventorySoundsets.GetSoundSet(this);
-        EffectSound sound = SEffectManager.CreateSound(soundset, GetGame().GetPlayer().GetPosition());
+        sound = SEffectManager.CreateSound(soundset, GetGame().GetPlayer().GetPosition());
         if (!sound)
         {
             return;

@@ -3,6 +3,7 @@ modded class PlayerBase
 
     private PluginFactionsClient m_PluginFactionsClient;
     private PluginUsersClient m_PluginUsersClient;
+    private PluginPPE m_PluginPPE;
     private int m_FactionId = -1;
     private int m_FactionRank = -1;
 
@@ -13,6 +14,7 @@ modded class PlayerBase
 
         Class.CastTo(m_PluginFactionsClient, GetPlugin(PluginFactionsClient));
         Class.CastTo(m_PluginUsersClient, GetPlugin(PluginUsersClient));
+        Class.CastTo(m_PluginPPE, GetPlugin(PluginPPE));
     }
 
     void SetFactionId(int factionId)
@@ -44,6 +46,15 @@ modded class PlayerBase
     int GetFactionRank()
     {
         return m_FactionRank;
+    }
+
+    void SetTriggerEffectPPE(CRDTN_ETriggerType triggerType, bool state)
+    {
+        if(!m_PluginPPE)
+        {
+            return;
+        }
+        
     }
 };
 
